@@ -26,6 +26,6 @@ public class Team {
     @OneToMany(mappedBy = "team",
             fetch = FetchType.EAGER)
     @Builder.Default
-    private  List<Member>
+    private List<Member>
             memberList = new ArrayList<>();
 }
