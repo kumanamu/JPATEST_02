@@ -18,7 +18,7 @@ public class Parent {
             strategy = GenerationType.IDENTITY)
     private Long p_id;
     @OneToMany(mappedBy = "parent",
-       fetch = FetchType.EAGER,
+            fetch = FetchType.EAGER,
             cascade = {CascadeType.PERSIST, CascadeType.REMOVE})
     private List<Child> children = new ArrayList<>();
 }

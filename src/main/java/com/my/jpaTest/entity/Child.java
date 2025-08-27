@@ -18,3 +18,4 @@ public class Child {
     @JoinColumn(name = "p_id")
     private Parent parent;
 }
+}
