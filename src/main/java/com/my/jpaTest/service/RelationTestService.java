@@ -1,9 +1,6 @@
 package com.my.jpaTest.service;
 
-import com.my.jpaTest.entity.Child;
-import com.my.jpaTest.entity.Member;
-import com.my.jpaTest.entity.Parent;
-import com.my.jpaTest.entity.Team;
+import com.my.jpaTest.entity.*;
 import jakarta.persistence.EntityManager;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -83,3 +80,5 @@ public class RelationTestService {
         em.remove(p);
     }
 }
+
+
