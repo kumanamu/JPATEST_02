@@ -1,13 +1,11 @@
 package com.my.jpaTest.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
-@Data
+@Getter
+@Setter
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
@@ -20,4 +18,13 @@ public class Member {
     @ManyToOne
     @JoinColumn(name = "teamId")
     private Team team;
+
+    @Override
+    public String toString() {
+        return "Member{" +
+                "memberId='" + memberId + '\'' +
+                ", name='" + name + '\'' +
+                ", team=" + team.getTeamName() +
+                '}';
+    }
 }
